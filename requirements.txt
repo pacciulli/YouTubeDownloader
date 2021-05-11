@@ -1,3 +1,2 @@
 pre-commit
 pytube
-moviepy
