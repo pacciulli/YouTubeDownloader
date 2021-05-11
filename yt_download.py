@@ -9,5 +9,5 @@ def yt_download(link, save_path):
         print("Video unavailable")
     else:
         print(f"Downloading {yt.title}")
-        video = yt.streams.get_by_itag(22)
+        video = yt.streams.filter(progressive=True).get_highest_resolution()
         video.download(save_path)
