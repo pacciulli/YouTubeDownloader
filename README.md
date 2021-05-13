@@ -6,5 +6,5 @@ To change download location update "save_path" variable at "main.py" file.
 
 Future improvements:
 - Add option to user decide between resolutions
-~~- Add feature for user to choose download and links files location~~
+- ~~Add feature for user to choose download and links files location~~
 - Add GUI
