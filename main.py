@@ -5,9 +5,13 @@ from yt_download import yt_download
 from createThreads import create_threads
 
 
+def get_path(file_name):
+    path = input(f"Insert {file_name} path: ")
+    return path
+
+
 def download_videos():
-    file_path = "links.txt"
-    save_path = "D:\\Downloads\\Videos"
+    file_path = get_path("Videos Link file")
 
     # Check if file with links is valid
     if os.path.isfile(file_path):
@@ -15,6 +19,8 @@ def download_videos():
     else:
         print(f"\n** File {file_path} does not exist. Please check and try again! **\n")
         sys.exit()
+
+    save_path = get_path("Save")
 
     # This section open links file, read it and remove \n chars
     file = open(file_path, "r")

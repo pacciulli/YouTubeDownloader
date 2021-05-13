@@ -1,11 +1,11 @@
 from pytube import YouTube
-from pytube.exceptions import VideoUnavailable
+from pytube.exceptions import *
 
 
 def yt_download(link, save_path):
     try:
         yt = YouTube(link)
-    except VideoUnavailable:
+    except PytubeError:
         print("Video unavailable")
     else:
         print(f"Downloading {yt.title}")
