@@ -5,11 +5,13 @@ from yt_download import yt_download
 from createThreads import create_threads
 
 
+# Get path function
 def get_path(file_name):
     path = input(f"Insert {file_name} path: ")
     return path
 
 
+# Download videos function
 def download_videos():
     file_path = get_path("Videos Link file")
 
