@@ -34,8 +34,14 @@ def download_videos():
 
     file.close()
 
+    hd = input(f"Download in HD (Y/N)?").upper()
+    if hd == "Y":
+        resolution = "HD"
+    else:
+        resolution = "SD"
+
     # Create and execute threads
-    create_threads(video_list, save_path, yt_download)
+    create_threads(video_list, save_path, yt_download, resolution)
 
 
 if __name__ == "__main__":

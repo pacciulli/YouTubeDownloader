@@ -1,2 +1,3 @@
 pre-commit
-pytube
+pytube~=10.8.2
+moviepy~=1.0.3
